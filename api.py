@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route('/productos',methods=['GET'])
 def Mostrar():
-        return jsonify({[{"id": 1,"nombre": "El sexto sentido","director": "M. Night Shyamalan","clasificacion": "Drama"}]})
+        return jsonify({[{"id": 1,"nombre": "El lllsexto sentido","director": "M. Night Shyamalan","clasificacion": "Drama"}]})
 
 @app.route('/crear', methods=['POST'])
 def Crear():
