@@ -2,15 +2,30 @@ from flask import Flask
 
 app = Flask(__name__)
 
+BOOKS = [
+    {
+        'title': 'On the Road',
+        'author': 'Jack Kerouac',
+        'read': True
+    },
+    {
+        'title': 'Harry Potter and the Philosopher\'s Stone',
+        'author': 'J. K. Rowling',
+        'read': False
+    },
+    {
+        'title': 'Green Eggs and Ham',
+        'author': 'Dr. Seuss',
+        'read': True
+    }
+]
+
 @app.route('/productos',methods=['GET'])
 def Mostrar():
-        return jsonify([
-        	{
-        		"id": "1",
-        		"nombre": "Goku",
-        		"imagen": "https://www.dondeir.com/wp-content/uploads/2020/05/anime-streaming-plataformas.jpg"
-        	}
-        ]);
+        return jsonify({
+        'status': 'success',
+        'books': BOOKS
+ 		})
 
 
 @app.route('/crear', methods=['POST'])
