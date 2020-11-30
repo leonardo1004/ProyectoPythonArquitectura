@@ -4,14 +4,13 @@ app = Flask(__name__)
 
 @app.route('/productos',methods=['GET'])
 def Mostrar():
-        return jsonify({
-        	"productos":[
+        return jsonify([
         	{
         		"id": "1",
         		"nombre": "Goku",
         		"imagen": "https://www.dondeir.com/wp-content/uploads/2020/05/anime-streaming-plataformas.jpg"
         	}
-        ]});
+        ]);
 
 
 @app.route('/crear', methods=['POST'])
