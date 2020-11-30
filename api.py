@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 import flask
 import json
 from flask import Flask, jsonify, request
@@ -13,7 +14,7 @@ CORS(app)
 
 @app.route('/Productos',methods=['GET'])
 def Mostrar():
-        return jsonify({[{"id": 1,"nombre": "El lllsexto sentido","director": "M. Night Shyamalan","clasificacion": "Drama"}]})
+        return "Perra vida";
 
 @app.route('/crear', methods=['POST'])
 def Crear():
