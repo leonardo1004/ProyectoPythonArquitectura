@@ -7,24 +7,30 @@ app = Flask(__name__)
 def ping_pong():
     return jsonify({
         'status': 'success',
-        'books': BOOKS
+        'data': DATA
     })
 
-BOOKS = [
+DATA = [
     {
-        'title': 'On the Road',
-        'author': 'Jack Kerouac',
-        'read': True
+        'id': '1',
+        'email': 'Jack@Kerouac',
+        'first_name': 'Leo',
+        'last_name': 'Qionte',
+        'avatar': 'ergethtuk'
     },
-    {
-        'title': 'Harry Potter and the Philosopher\'s Stone',
-        'author': 'J. K. Rowling',
-        'read': False
+     {
+        'id': '2',
+        'email': 'Jack@Keruac',
+        'first_name': 'Nico',
+        'last_name': 'gonze',
+        'avatar': 'whqghhq'
     },
-    {
-        'title': 'Green Eggs and Ham',
-        'author': 'Dr. Seuss',
-        'read': True
+      {
+        'id': '3',
+        'email': 'Jack@Keroac',
+        'first_name': 'ergerg',
+        'last_name': 'wrgt4h',
+        'avatar': 'rgwwhth'
     }
 ]
 
