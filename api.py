@@ -137,6 +137,26 @@ DATA = [
     }
 ]
 
+@app.route('/ping/id', methods=['GET'])
+def ping_id():
+    return jsonify({
+        'status': 'success',
+        'data': DATA2
+    })
+
+DATA2 = [
+    {	
+    	'usuario': 'Pedro Perez',
+        'id': '1',
+        'producto': 'PC Gamer',
+        'especificacion': '16 GB Ram, Intel icore7',
+        'precio': '5000000',
+        'cantidad': '2',
+        'categoria': 'tecnologia',
+        'avatar': 'https://i.blogs.es/ba8545/pcheap/450_1000.jpg'
+    }
+]
+
 
 if __name__ == '__main__':
     app.run( host = '0.0.0.0',debug=True)
