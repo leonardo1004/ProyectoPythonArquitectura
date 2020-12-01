@@ -22,7 +22,10 @@ def ping_pong():
         'read': True
     }
 	]
-    return jsonify(BOOKS)
+    return jsonify({
+        'status': 'success',
+        'books': BOOKS
+    })
 
 
 if __name__ == '__main__':
