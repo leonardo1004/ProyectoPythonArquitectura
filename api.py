@@ -10,7 +10,7 @@ app.config.from_object(__name__)
 
 CORS(app)
 @app.route('/')
-def hellos:
+def hellos():
 	return "Hello friend"
 
 @app.route('/ping', methods=['GET'])
