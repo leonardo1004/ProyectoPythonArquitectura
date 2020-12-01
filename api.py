@@ -62,7 +62,7 @@ DATA = [
         'especificacion': 'Scooter electrica',
         'precio': '4000000',
         'cantidad': '1',
-        'categoria': 'Movilidad'
+        'categoria': 'Movilidad',
         'avatar': 'https://www.comprascolectivas.com/1162/moto-electrica-starker-avanti-20-2019.jpg'
     },
     {
