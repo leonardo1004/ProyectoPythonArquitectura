@@ -1,9 +1,11 @@
 #!/usr/bin/python3
 from flask import Flask, jsonify
+from flask_cors import CORS
 
 DEBUG=True
 
 app = Flask(__name__)
+CORS(app)
 
 @app.route('/ping', methods=['GET'])
 def ping_pong():
