@@ -10,6 +10,7 @@ app.config.from_object(__name__)
 
 CORS(app, resources={r'/*': {'origins': '*'}})
 
+CORS(app)
 @app.route('/ping', methods=['GET'])
 def ping_pong():
     return jsonify({
