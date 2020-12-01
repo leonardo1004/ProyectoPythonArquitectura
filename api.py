@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 from flask import Flask, jsonify
 
+DEBUG=True
+
 app = Flask(__name__)
 
 @app.route('/ping', methods=['GET'])
@@ -36,5 +38,5 @@ DATA = [
 
 
 if __name__ == '__main__':
-    app.run( host = '0.0.0.0')
+    app.run( host = '0.0.0.0',debug=True)
 
