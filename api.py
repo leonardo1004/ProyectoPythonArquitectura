@@ -5,9 +5,15 @@ from flask_cors import CORS
 DEBUG=True
 
 app = Flask(__name__)
-CORS(app)
 
-@app.route('/ping/', methods=['GET'])
+app.config.from_object(__name__)
+
+CORS(app)
+@app.route('/')
+def hellos:
+	return "Hello friend"
+
+@app.route('/ping', methods=['GET'])
 def ping_pong():
     return jsonify({
         'status': 'success',
