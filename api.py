@@ -5,7 +5,12 @@ app = Flask(__name__)
 
 @app.route('/ping', methods=['GET'])
 def ping_pong():
-	BOOKS = [
+    return jsonify({
+        'status': 'success',
+        'books': BOOKS
+    })
+
+BOOKS = [
     {
         'title': 'On the Road',
         'author': 'Jack Kerouac',
@@ -21,12 +26,7 @@ def ping_pong():
         'author': 'Dr. Seuss',
         'read': True
     }
-	]
-    return jsonify({
-        'status': 'success',
-        'books': BOOKS
-    })
-
+]
 
 if __name__ == '__main__':
     app.run( host = '0.0.0.0')
