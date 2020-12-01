@@ -95,6 +95,46 @@ DATA = [
         'categoria': 'Indumentaria',
         'avatar': 'https://arturocalle.vteximg.com.br/arquivos/ids/211432-1200-1598/HOMBRE-GAFAS-10077954-NEGRO_1.jpg?v=636981319011600000'
     },
+    {
+        'usuario': 'Karen Sanchez',
+        'id': '9',
+        'producto': 'Cuadro',
+        'especificacion': 'Partido en 3 20x20m',
+        'precio': '1000000',
+        'cantidad': '10',
+        'categoria': 'Decoracion inmueble',
+        'avatar': 'https://i.pinimg.com/originals/f8/5c/c8/f85cc840de622226560f8fb3b538aa4a.jpg'
+    },
+    {
+        'usuario': 'Juan Jose Quintero',
+        'id': '10',
+        'producto': 'Zapato',
+        'especificacion': 'Jhordan 1 gris',
+        'precio': '800000',
+        'cantidad': '2',
+        'categoria': 'Indumentaria',
+        'avatar': 'https://i.pinimg.com/originals/5a/55/d0/5a55d053e7a7c8f4aa06fa8030b99b25.jpg'
+    },
+    {
+        'usuario': 'Daniela Gutierrez',
+        'id': '11',
+        'producto': 'Silla',
+        'especificacion': 'Silla rosada de escritorio',
+        'precio': '750000',
+        'cantidad': '18',
+        'categoria': 'Muebles',
+        'avatar': 'https://ae01.alicdn.com/kf/HTB1is7oXITxK1Rjy0Fgq6yovpXa3.jpg_q50.jpg'
+    },
+    {
+        'usuario': 'Mario Mendez',
+        'id': '12',
+        'producto': 'Chanclas',
+        'especificacion': 'Color negro con blanco',
+        'precio': '420000',
+        'cantidad': '1',
+        'categoria': 'Indumentaria',
+        'avatar': 'https://i.pinimg.com/originals/da/f8/21/daf821ff26d76c127d682bd5b3e7137c.jpg'
+    }
 ]
 
 
