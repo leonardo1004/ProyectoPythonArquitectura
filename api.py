@@ -5,8 +5,8 @@ from flask_cors import CORS
 DEBUG=True
 
 app = Flask(__name__)
+cors = CORS(app, resources={r"/ping/*": {"origins": "*"}})
 
-CORS(app)
 @app.route('/ping', methods=['GET'])
 def ping_pong():
     return jsonify({
