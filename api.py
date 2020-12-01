@@ -9,7 +9,8 @@ def ping_pong():
         'status': 'success',
         'books': BOOKS
     })
-    BOOKS = [
+
+BOOKS = [
     {
         'title': 'On the Road',
         'author': 'Jack Kerouac',
@@ -25,7 +26,7 @@ def ping_pong():
         'author': 'Dr. Seuss',
         'read': True
     }
-	]
+]
 
 
 if __name__ == '__main__':
