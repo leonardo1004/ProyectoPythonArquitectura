@@ -36,7 +36,7 @@ DATA = [
         'avatar': 'https://images-na.ssl-images-amazon.com/images/I/613D0HzYeuL._AC_SY355_.jpg'
     },
       {
-        'usuario': 'Nicolas Gonzales',
+        'usuario': 'Nicolas Gonzalez',
         'id': '3',
         'producto': 'Celulares Xiamoi',
         'especificacion': '128GB almcenamiento',
@@ -76,7 +76,7 @@ DATA = [
         'avatar': 'https://cronicaglobal.elespanol.com/uploads/s1/23/08/86/5/bicicleta.jpeg'
     },
     {
-        'usuario': 'Andres Felipe Gonzales',
+        'usuario': 'Andres Felipe Gonzalez',
         'id': '7',
         'producto': 'Parlante',
         'especificacion': 'Aiwa color negro-azul',
@@ -136,27 +136,6 @@ DATA = [
         'avatar': 'https://i.pinimg.com/originals/da/f8/21/daf821ff26d76c127d682bd5b3e7137c.jpg'
     }
 ]
-
-@app.route('/ping/id', methods=['GET'])
-def ping_id():
-    return jsonify({
-        'status': 'success',
-        'data': DATA2
-    })
-
-DATA2 = [
-    {	
-    	'usuario': 'Pedro Perez',
-        'id': '1',
-        'producto': 'PC Gamer',
-        'especificacion': '16 GB Ram, Intel icore7',
-        'precio': '5000000',
-        'cantidad': '2',
-        'categoria': 'tecnologia',
-        'avatar': 'https://i.blogs.es/ba8545/pcheap/450_1000.jpg'
-    }
-]
-
 
 if __name__ == '__main__':
     app.run( host = '0.0.0.0',debug=True)
