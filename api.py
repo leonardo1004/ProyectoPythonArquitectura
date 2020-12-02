@@ -16,7 +16,7 @@ cors = CORS(app, resources={r"/ping/*": {"origins": "*"}})
 #Permite el enrutamiento mediante el metodo GET
 @app.route('/ping', methods=['GET']) 
 def ping_pong():
-	'Nos retorna el contenido de nuestro objeto en formato json'
+#Nos retorna el contenido de nuestro objeto en formato json
     return jsonify({
         'status': 'success',
         'data': DATA
