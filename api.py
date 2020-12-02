@@ -132,10 +132,10 @@ def ping_pong():
 	    }
 	]
 
-return jsonify({
-    'status': 'success',
-    'data': DATA
-})
+		return jsonify({
+		    'status': 'success',
+		    'data': DATA
+		})
 
 
 
