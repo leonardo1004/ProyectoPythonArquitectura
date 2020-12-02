@@ -1,23 +1,22 @@
 #!/usr/bin/python3
-from flask import Flask, jsonify#Importamos Flask y jsonify
-from flask_cors import CORS#Importamos CORS
+from flask import Flask, jsonify 
+from flask_cors import CORS 
 
-# configuration permite la hbilitacion de la depuracion
+#configuration permite la hbilitacion de la depuracion
 DEBUG=True
 
-# instantiate the app
+#instantiate the app
 app = Flask(__name__)
 app.config.from_object(__name__)
 
 
-# enable CORS
+#enable CORS
 cors = CORS(app, resources={r"/ping/*": {"origins": "*"}})
 
-# sanity check route
 #Permite el enrutamiento mediante el metodo GET
 @app.route('/ping', methods=['GET']) 
 def ping_pong():
-	#Nos retorna el contenido de nuestro objeto en formato json
+	'Nos retorna el contenido de nuestro objeto en formato json'
     return jsonify({
         'status': 'success',
         'data': DATA
