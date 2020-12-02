@@ -9,18 +9,21 @@ DEBUG=True
 app = Flask(__name__)
 app.config.from_object(__name__)
 
+
 # enable CORS
 cors = CORS(app, resources={r"/ping/*": {"origins": "*"}})
 
 # sanity check route
-@app.route('/ping', methods=['GET'])#Permite el enrutamiento mediante el metodo GET 
+#Permite el enrutamiento mediante el metodo GET
+@app.route('/ping', methods=['GET']) 
 def ping_pong():
-    return jsonify({#Nos retorna el contenido de nuestro objeto en formato json
+	#Nos retorna el contenido de nuestro objeto en formato json
+    return jsonify({
         'status': 'success',
         'data': DATA
     })
-
-DATA = [#Creamos un objeto que guardara los productos que se generaran en el index
+#Creamos un objeto que guardara los productos que se generaran en el index
+DATA = [
     {	
     	'usuario': 'Pedro Perez',
         'id': '1',
