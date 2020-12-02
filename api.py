@@ -4,16 +4,20 @@ from flask_cors import CORS
 
 DEBUG=True
 
-app = Flask(__name__)
-cors = CORS(app, resources={r"/ping/*": {"origins": "*"}})
 
+
+app.config.from_object(__name__)
+
+
+
+app = flask.Flask(__name__)
+app.config["DEBUG"] = True
+
+
+CORS(app)
 @app.route('/ping/<id>', methods=['GET'])
 def ping_pong(id):
-    return jsonify({
-        'status': 'success',
-        'data': DATA
-    })
-
+    
 DATA = [
     {	
     	'usuario': 'Pedro Perez',
@@ -36,7 +40,7 @@ DATA = [
         'avatar': 'https://images-na.ssl-images-amazon.com/images/I/613D0HzYeuL._AC_SY355_.jpg'
     },
       {
-        'usuario': 'Nicolas Gonzalez',
+        'usuario': 'Nicolas Gonzales',
         'id': '3',
         'producto': 'Celulares Xiamoi',
         'especificacion': '128GB almcenamiento',
@@ -76,7 +80,7 @@ DATA = [
         'avatar': 'https://cronicaglobal.elespanol.com/uploads/s1/23/08/86/5/bicicleta.jpeg'
     },
     {
-        'usuario': 'Andres Felipe Gonzalez',
+        'usuario': 'Andres Felipe Gonzales',
         'id': '7',
         'producto': 'Parlante',
         'especificacion': 'Aiwa color negro-azul',
@@ -84,6 +88,16 @@ DATA = [
         'cantidad': '6',
         'categoria': 'tecnologia',
         'avatar': 'https://panamericana.vteximg.com.br/arquivos/ids/341920-600-690/parlante-bluetooth-aiwa-awsp08m-con-microfono-negro-2-7453041029500.jpg?v=637112332915130000'
+    },
+    {
+        'usuario': 'valentina Molina',
+        'id': '8',
+        'producto': 'Gafas de sol',
+        'especificacion': 'Marco negro, color negro',
+        'precio': '420000',
+        'cantidad': '3',
+        'categoria': 'Indumentaria',
+        'avatar': 'https://arturocalle.vteximg.com.br/arquivos/ids/211432-1200-1598/HOMBRE-GAFAS-10077954-NEGRO_1.jpg?v=636981319011600000'
     },
     {
         'usuario': 'valentina Molina',
@@ -137,6 +151,11 @@ DATA = [
     }
 ]
 
-if __name__ == '__main__':
-    app.run( host = '0.0.0.0',debug=True)
+return jsonify({
+        'status': 'success',
+        'data': DATA
+    })
 
+
+if _name_ == '_main_':
+    app.run( host = '0.0.0.0',debug=True)
