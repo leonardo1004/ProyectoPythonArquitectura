@@ -4,7 +4,7 @@ from flask_cors import CORS
 
 DEBUG=True
 
-app = Flask(_name_)
+app = Flask(__name__)
 cors = CORS(app, resources={r"/ping/*": {"origins": "*"}})
 
 @app.route('/ping', methods=['GET'])
@@ -158,5 +158,5 @@ DATA2 = [
 ]
 
 
-if _name_ == '_main_':
+if _name_ == '__main__':
     app.run( host = '0.0.0.0',debug=True)
