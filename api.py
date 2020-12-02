@@ -4,14 +4,12 @@ from flask_cors import CORS
 
 DEBUG=True
 
-app = flask.Flask(__name__)
-app.config["DEBUG"] = True
+app = Flask(_name_)
+cors = CORS(app, resources={r"/ping/*": {"origins": "*"}})
 
-
-CORS(app)
-@app.route('/ping/<id>', methods=['GET'])
-def ping_pong(id):
-	return jsonify({
+@app.route('/ping', methods=['GET'])
+def ping_pong():
+    return jsonify({
         'status': 'success',
         'data': DATA
     })
@@ -98,16 +96,6 @@ DATA = [
         'avatar': 'https://arturocalle.vteximg.com.br/arquivos/ids/211432-1200-1598/HOMBRE-GAFAS-10077954-NEGRO_1.jpg?v=636981319011600000'
     },
     {
-        'usuario': 'valentina Molina',
-        'id': '8',
-        'producto': 'Gafas de sol',
-        'especificacion': 'Marco negro, color negro',
-        'precio': '420000',
-        'cantidad': '3',
-        'categoria': 'Indumentaria',
-        'avatar': 'https://arturocalle.vteximg.com.br/arquivos/ids/211432-1200-1598/HOMBRE-GAFAS-10077954-NEGRO_1.jpg?v=636981319011600000'
-    },
-    {
         'usuario': 'Karen Sanchez',
         'id': '9',
         'producto': 'Cuadro',
@@ -146,6 +134,26 @@ DATA = [
         'cantidad': '1',
         'categoria': 'Indumentaria',
         'avatar': 'https://i.pinimg.com/originals/da/f8/21/daf821ff26d76c127d682bd5b3e7137c.jpg'
+    }
+]
+
+@app.route('/ping/id', methods=['GET'])
+def ping_id():
+    return jsonify({
+        'status': 'success',
+        'data': DATA2
+    })
+
+DATA2 = [
+    {	
+    	'usuario': 'Pedro Perez',
+        'id': '1',
+        'producto': 'PC Gamer',
+        'especificacion': '16 GB Ram, Intel icore7',
+        'precio': '5000000',
+        'cantidad': '2',
+        'categoria': 'tecnologia',
+        'avatar': 'https://i.blogs.es/ba8545/pcheap/450_1000.jpg'
     }
 ]
 
