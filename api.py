@@ -2,7 +2,7 @@
 from flask import Flask, jsonify#Importamos Flask y jsonify
 from flask_cors import CORS#Importamos CORS
 
-# configuration
+# configuration permite la hbilitacion de la depuracion
 DEBUG=True
 
 # instantiate the app
@@ -13,14 +13,14 @@ app.config.from_object(__name__)
 cors = CORS(app, resources={r"/ping/*": {"origins": "*"}})
 
 # sanity check route
-@app.route('/ping', methods=['GET'])
+@app.route('/ping', methods=['GET'])#Permite el enrutamiento mediante el metodo GET 
 def ping_pong():
-    return jsonify({
+    return jsonify({#Nos retorna el contenido de nuestro objeto en formato json
         'status': 'success',
         'data': DATA
     })
 
-DATA = [
+DATA = [#Creamos un objeto que guardara los productos que se generaran en el index
     {	
     	'usuario': 'Pedro Perez',
         'id': '1',
@@ -143,6 +143,7 @@ DATA = [
     }
 ]
 
+#Todo esto es una prueba
 @app.route('/ping/id', methods=['GET'])
 def ping_id():
     return jsonify({
@@ -163,6 +164,6 @@ DATA2 = [
     }
 ]
 
-
+#Condicional que permite la ejecucion de nuestra api
 if __name__ == '__main__':
     app.run( host = '0.0.0.0',debug=True)
