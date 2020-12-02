@@ -4,12 +4,6 @@ from flask_cors import CORS
 
 DEBUG=True
 
-
-
-app.config.from_object(__name__)
-
-
-
 app = flask.Flask(__name__)
 app.config["DEBUG"] = True
 
