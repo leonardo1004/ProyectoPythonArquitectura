@@ -1,12 +1,18 @@
 #!/usr/bin/python3
-from flask import Flask, jsonify
-from flask_cors import CORS
+from flask import Flask, jsonify#Importamos Flask y jsonify
+from flask_cors import CORS#Importamos CORS
 
+# configuration
 DEBUG=True
 
+# instantiate the app
 app = Flask(__name__)
+app.config.from_object(__name__)
+
+# enable CORS
 cors = CORS(app, resources={r"/ping/*": {"origins": "*"}})
 
+# sanity check route
 @app.route('/ping', methods=['GET'])
 def ping_pong():
     return jsonify({
