@@ -17,7 +17,11 @@ app.config["DEBUG"] = True
 CORS(app)
 @app.route('/ping/<id>', methods=['GET'])
 def ping_pong(id):
-    
+	return jsonify({
+        'status': 'success',
+        'data': DATA
+    })
+
 DATA = [
     {	
     	'usuario': 'Pedro Perez',
@@ -150,11 +154,6 @@ DATA = [
         'avatar': 'https://i.pinimg.com/originals/da/f8/21/daf821ff26d76c127d682bd5b3e7137c.jpg'
     }
 ]
-
-return jsonify({
-        'status': 'success',
-        'data': DATA
-    })
 
 
 if _name_ == '_main_':
